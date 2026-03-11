@@ -1,0 +1,248 @@
+2026-03-11 16:31:41 - __main__ - INFO - Starting data ingestion pipeline...
+2026-03-11 16:31:41 - src.ingestion.loaders - INFO - Loading TXT files...
+2026-03-11 16:31:41 - src.ingestion.loaders - INFO - TXT files loaded: 1
+2026-03-11 16:31:41 - src.ingestion.loaders - INFO - Loading PDF files...
+2026-03-11 16:31:42 - src.ingestion.loaders - INFO - PDF files loaded: 3
+2026-03-11 16:31:42 - src.ingestion.loaders - INFO - Loading HTML files...
+2026-03-11 16:31:42 - src.ingestion.loaders - INFO - HTML files loaded: 1
+2026-03-11 16:31:42 - src.ingestion.loaders - INFO - Total documents loaded: 5
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Starting to chunk 5 documents...
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Document 1/5: 3 chunks created
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Document 2/5: 3 chunks created
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Document 3/5: 4 chunks created
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Document 4/5: 1 chunks created
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Document 5/5: 3 chunks created
+2026-03-11 16:31:42 - src.ingestion.chunker - INFO - Chunking completed. Total chunks created: 14
+2026-03-11 16:31:42 - src.ingestion.embedding - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-03-11 16:31:48 - src.ingestion.embedding - INFO - Model loaded. Dimension: 384
+2026-03-11 16:31:48 - src.ingestion.embedding - INFO - Generating embeddings for 14 texts
+2026-03-11 16:31:48 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 16:31:48 - src.store.vectorstore - INFO - Vector store initialized. Collection: faq_docs
+2026-03-11 16:31:48 - src.store.vectorstore - INFO - Existing documents in collection: 0
+2026-03-11 16:31:48 - src.store.vectorstore - INFO - Adding 14 documents to vector store...
+2026-03-11 16:31:48 - src.store.vectorstore - INFO - Added 14 documents. Total now: 14
+2026-03-11 16:31:48 - __main__ - INFO - Data ingestion pipeline completed!
+2026-03-11 16:51:15 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:51:15 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:51:15 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:51:15 - app - INFO - Warming up LLM...
+2026-03-11 16:51:23 - app - INFO - LLM warmup complete
+2026-03-11 16:51:23 - src.api.middleware.timing - INFO - GET /docs completed in 0.0s
+2026-03-11 16:51:24 - src.api.middleware.timing - INFO - GET /openapi.json completed in 0.01s
+2026-03-11 16:51:58 - src.api.routes.ask - INFO - Received question: what is the company's mission?
+2026-03-11 16:51:58 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 16:51:58 - src.api.routes.ask - INFO - Cache MISS — running RAG pipeline
+2026-03-11 16:51:58 - src.core.retriever - INFO - Initializing EmbeddingManager
+2026-03-11 16:51:58 - src.ingestion.embedding - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-03-11 16:52:04 - src.ingestion.embedding - INFO - Model loaded. Dimension: 384
+2026-03-11 16:52:04 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 16:52:05 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 16:52:05 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 16:52:05 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 16:52:05 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 16:52:15 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 16:52:15 - src.api.routes.ask - INFO - RAG pipeline completed in 16.52s
+2026-03-11 16:52:15 - src.api.routes.ask - INFO - Running inline model guardrail...
+2026-03-11 16:52:15 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 16:52:25 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 16:52:25 - src.api.routes.ask - INFO - Guardrail completed in 10.34s
+2026-03-11 16:52:25 - src.api.routes.ask - INFO - Request completed in 26.9s (rag=16.52s, guardrail=10.34s)
+2026-03-11 16:52:25 - src.api.middleware.timing - INFO - POST /ask completed in 26.9s
+2026-03-11 16:53:37 - src.api.routes.ask - INFO - Received question: what is the company's mission?
+2026-03-11 16:53:37 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 16:53:37 - src.api.routes.ask - INFO - Cache HIT — returned in 0.003s
+2026-03-11 16:53:37 - src.api.middleware.timing - INFO - POST /ask completed in 0.02s
+2026-03-11 16:53:52 - src.api.routes.ask - INFO - Received question: what are the company's products?
+2026-03-11 16:53:52 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 16:53:52 - src.api.routes.ask - INFO - Cache MISS — running RAG pipeline
+2026-03-11 16:53:52 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 16:53:52 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 16:53:52 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 16:53:52 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 16:53:52 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 16:54:05 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 16:54:05 - src.api.routes.ask - INFO - RAG pipeline completed in 13.15s
+2026-03-11 16:54:05 - src.api.routes.ask - INFO - Running inline model guardrail...
+2026-03-11 16:54:05 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 16:54:13 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 16:54:13 - src.api.routes.ask - INFO - Guardrail completed in 7.07s
+2026-03-11 16:54:13 - src.api.routes.ask - INFO - Request completed in 20.23s (rag=13.15s, guardrail=7.07s)
+2026-03-11 16:54:13 - src.api.middleware.timing - INFO - POST /ask completed in 20.24s
+2026-03-11 16:56:49 - app - INFO - Redis connection closed.
+2026-03-11 16:57:03 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:57:04 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:57:04 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:57:04 - app - INFO - Warming up LLM...
+2026-03-11 16:57:05 - app - INFO - LLM warmup complete
+2026-03-11 16:57:22 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:57:23 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:57:23 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:57:23 - app - INFO - Warming up LLM...
+2026-03-11 16:57:24 - app - INFO - LLM warmup complete
+2026-03-11 16:57:40 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:57:41 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:57:41 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:57:41 - app - INFO - Warming up LLM...
+2026-03-11 16:57:42 - app - INFO - LLM warmup complete
+2026-03-11 16:57:58 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:57:59 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:57:59 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:57:59 - app - INFO - Warming up LLM...
+2026-03-11 16:58:01 - app - INFO - LLM warmup complete
+2026-03-11 16:58:18 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:58:19 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:58:19 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:58:19 - app - INFO - Warming up LLM...
+2026-03-11 16:58:20 - app - INFO - LLM warmup complete
+2026-03-11 16:58:36 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:58:37 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:58:37 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:58:37 - app - INFO - Warming up LLM...
+2026-03-11 16:58:38 - app - INFO - LLM warmup complete
+2026-03-11 16:59:06 - app - INFO - Redis connection verified. PING: True
+2026-03-11 16:59:08 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 16:59:08 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 16:59:08 - app - INFO - Warming up LLM...
+2026-03-11 16:59:09 - app - INFO - LLM warmup complete
+2026-03-11 17:04:53 - app - INFO - Redis connection closed.
+2026-03-11 17:05:21 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:05:22 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:05:22 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:05:22 - app - INFO - Warming up LLM...
+2026-03-11 17:05:29 - app - INFO - LLM warmup complete
+2026-03-11 17:06:23 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:06:25 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:06:25 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:06:25 - app - INFO - Warming up LLM...
+2026-03-11 17:06:26 - app - INFO - LLM warmup complete
+2026-03-11 17:06:26 - src.api.middleware.timing - INFO - GET /docs completed in 0.0s
+2026-03-11 17:06:27 - src.api.middleware.timing - INFO - GET /openapi.json completed in 0.01s
+2026-03-11 17:06:52 - src.api.routes.ask - INFO - Received question: what are the company's timings?
+2026-03-11 17:06:52 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 17:06:52 - src.api.routes.ask - INFO - Cache MISS — running RAG pipeline
+2026-03-11 17:06:52 - src.core.retriever - INFO - Initializing EmbeddingManager
+2026-03-11 17:06:52 - src.ingestion.embedding - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-03-11 17:06:58 - src.ingestion.embedding - INFO - Model loaded. Dimension: 384
+2026-03-11 17:06:58 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 17:06:59 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 17:06:59 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 17:06:59 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 17:06:59 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 17:07:17 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 17:07:17 - src.api.routes.ask - INFO - RAG pipeline completed in 24.46s
+2026-03-11 17:07:17 - src.api.routes.ask - INFO - Running inline model guardrail...
+2026-03-11 17:07:17 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 17:07:24 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 17:07:24 - src.api.routes.ask - INFO - Guardrail completed in 7.35s
+2026-03-11 17:07:24 - src.api.routes.ask - INFO - Request completed in 31.85s (rag=24.46s, guardrail=7.35s)
+2026-03-11 17:07:24 - src.api.middleware.timing - INFO - POST /ask completed in 31.85s
+2026-03-11 17:07:48 - app - INFO - Redis connection closed.
+2026-03-11 17:18:57 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:18:59 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:18:59 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:18:59 - app - INFO - Warming up LLM
+2026-03-11 17:19:05 - app - INFO - LLM warmup complete
+2026-03-11 17:19:05 - src.api.middleware.timing - INFO - GET /docs completed in 0.0s
+2026-03-11 17:19:06 - src.api.middleware.timing - INFO - GET /openapi.json completed in 0.01s
+2026-03-11 17:22:01 - app - INFO - Redis connection closed.
+2026-03-11 17:24:17 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:24:18 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:24:18 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:24:18 - app - INFO - Warming up LLM
+2026-03-11 17:24:24 - app - INFO - LLM warmup complete
+2026-03-11 17:24:30 - src.api.middleware.timing - INFO - GET /docs completed in 0.0s
+2026-03-11 17:24:30 - src.api.middleware.timing - INFO - GET /openapi.json completed in 0.0s
+2026-03-11 17:24:54 - src.api.routes.ask - INFO - Received question: what is the company's mission?
+2026-03-11 17:24:54 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 17:24:54 - src.api.routes.ask - INFO - Cache MISS:running RAG pipeline
+2026-03-11 17:24:54 - src.core.retriever - INFO - Initializing EmbeddingManager
+2026-03-11 17:24:54 - src.ingestion.embedding - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-03-11 17:25:00 - src.ingestion.embedding - INFO - Model loaded. Dimension: 384
+2026-03-11 17:25:00 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 17:25:00 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 17:25:00 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 17:25:00 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 17:25:00 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 17:25:12 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 17:25:12 - src.api.routes.ask - INFO - RAG pipeline completed in 17.48s
+2026-03-11 17:25:12 - src.api.routes.ask - INFO - Running inline model guardrail
+2026-03-11 17:25:12 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 17:25:20 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 17:25:20 - src.api.routes.ask - INFO - Guardrail completed in 8.35s
+2026-03-11 17:25:20 - src.api.routes.ask - INFO - Request completed in 25.83s (rag=17.48s, guardrail=8.35s)
+2026-03-11 17:25:20 - src.api.middleware.timing - INFO - POST /ask completed in 25.84s
+2026-03-11 17:26:38 - src.api.routes.ask - INFO - Received question: <b>What is the refund policy?</b>
+2026-03-11 17:26:38 - src.utils.guardrails - INFO - Deterministic check passed
+2026-03-11 17:26:38 - src.api.routes.ask - INFO - Cache MISS:running RAG pipeline
+2026-03-11 17:26:38 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 17:26:38 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 17:26:38 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 17:26:38 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 17:26:38 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 17:26:59 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 17:26:59 - src.api.routes.ask - INFO - RAG pipeline completed in 21.06s
+2026-03-11 17:26:59 - src.api.routes.ask - INFO - Running inline model guardrail
+2026-03-11 17:26:59 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 17:27:05 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 17:27:05 - src.api.routes.ask - INFO - Guardrail completed in 6.2s
+2026-03-11 17:27:05 - src.api.routes.ask - INFO - Request completed in 27.26s (rag=21.06s, guardrail=6.2s)
+2026-03-11 17:27:05 - src.api.middleware.timing - INFO - POST /ask completed in 27.26s
+2026-03-11 17:33:52 - app - INFO - Redis connection closed.
+2026-03-11 17:34:09 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:34:10 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:34:10 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:34:10 - app - INFO - Warming up LLM
+2026-03-11 17:34:16 - app - INFO - LLM warmup complete
+2026-03-11 17:34:31 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:34:32 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:34:32 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:34:32 - app - INFO - Warming up LLM
+2026-03-11 17:34:33 - app - INFO - LLM warmup complete
+2026-03-11 17:34:47 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:34:49 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:34:49 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:34:49 - app - INFO - Warming up LLM
+2026-03-11 17:34:50 - app - INFO - LLM warmup complete
+2026-03-11 17:37:10 - app - INFO - Redis connection closed.
+2026-03-11 17:37:23 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:37:25 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:37:25 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:37:25 - app - INFO - Warming up LLM
+2026-03-11 17:37:27 - app - INFO - LLM warmup complete
+2026-03-11 17:42:58 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:42:59 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:42:59 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:42:59 - app - INFO - Warming up LLM
+2026-03-11 17:43:04 - app - INFO - LLM warmup complete
+2026-03-11 17:43:22 - app - INFO - Redis connection closed.
+2026-03-11 17:43:47 - app - INFO - Redis connection verified. PING: True
+2026-03-11 17:43:49 - src.core.retriever - INFO - ChromaRetriever initialized. Collection: faq_docs
+2026-03-11 17:43:49 - src.core.rag_pipeline - INFO - Creating async RAG chain...
+2026-03-11 17:43:49 - app - INFO - Warming up LLM
+2026-03-11 17:43:50 - app - INFO - LLM warmup complete
+2026-03-11 17:43:50 - src.api.middleware.timing - INFO - GET /docs completed in 0.0s
+2026-03-11 17:43:50 - src.api.middleware.timing - INFO - GET /openapi.json completed in 0.0s
+2026-03-11 17:44:16 - src.api.routes.ask - INFO - Received question: what is the company's mission?
+2026-03-11 17:44:16 - src.utils.guardrails - INFO - Input validation passed
+2026-03-11 17:44:16 - src.api.routes.ask - INFO - Cache MISS — running RAG pipeline
+2026-03-11 17:44:16 - src.core.retriever - INFO - Initializing EmbeddingManager
+2026-03-11 17:44:16 - src.ingestion.embedding - INFO - Loading embedding model: all-MiniLM-L6-v2
+2026-03-11 17:44:22 - src.ingestion.embedding - INFO - Model loaded. Dimension: 384
+2026-03-11 17:44:22 - src.ingestion.embedding - INFO - Generating embeddings for 1 texts
+2026-03-11 17:44:22 - src.ingestion.embedding - INFO - Embeddings generated successfully
+2026-03-11 17:44:22 - src.core.retriever - INFO - Searching top 2 similar documents...
+2026-03-11 17:44:22 - src.core.retriever - INFO - Found 2 similar documents
+2026-03-11 17:44:22 - src.core.rag_pipeline - INFO - Generating answer from LLM...
+2026-03-11 17:44:33 - src.core.rag_pipeline - INFO - Answer generated successfully
+2026-03-11 17:44:33 - src.api.routes.ask - INFO - RAG pipeline completed in 16.44s
+2026-03-11 17:44:33 - src.api.routes.ask - INFO - Running inline model guardrail...
+2026-03-11 17:44:33 - src.utils.guardrails - INFO - Running inline model guardrail check...
+2026-03-11 17:44:43 - src.utils.guardrails - INFO - Inline guardrail passed
+2026-03-11 17:44:43 - src.api.routes.ask - INFO - Guardrail completed in 10.48s
+2026-03-11 17:44:43 - src.api.routes.ask - INFO - Request completed in 26.92s (rag=16.44s, guardrail=10.48s)
+2026-03-11 17:44:43 - src.api.middleware.timing - INFO - POST /ask completed in 26.93s
+2026-03-11 17:45:41 - src.api.routes.ask - INFO - Received question: <iframe src='evil.com'></iframe>
+2026-03-11 17:45:41 - src.utils.guardrails - WARNING - Dangerous pattern detected in input: '<iframe src='evil.com'></iframe>'
+2026-03-11 17:45:41 - src.api.routes.ask - WARNING - Validation error: Please enter a valid question without special characters or code.
+2026-03-11 17:45:41 - src.api.middleware.timing - INFO - POST /ask completed in 0.01s
+2026-03-11 17:46:12 - app - INFO - Redis connection closed.

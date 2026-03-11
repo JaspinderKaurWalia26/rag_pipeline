@@ -1,0 +1,14 @@
+Q: What is your return policy?
+A: We offer a 30-day return policy for all products. Items must be in original condition with tags attached. To initiate a return, contact our support team at support@company.com.
+
+Q: How long does shipping take?
+A: Standard shipping takes 5-7 business days. Express shipping takes 2-3 business days. International shipping can take 10-15 business days depending on the destination country.
+
+Q: Do you offer customer support?
+A: Yes, we offer 24/7 customer support via email at support@company.com and phone at 1-800-COMPANY. Live chat is available Monday to Friday, 9 AM to 6 PM EST.
+
+Q: What payment methods do you accept?
+A: We accept Visa, MasterCard, American Express, PayPal, and bank transfers. All transactions are secured with SSL encryption.
+
+Q: How can I track my order?
+A: Once your order ships, you'll receive a tracking email with a tracking number. You can track your order on our website under "My Orders" or directly on the carrier's website.

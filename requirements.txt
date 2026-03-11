@@ -1,0 +1,31 @@
+# Web Framework
+fastapi
+uvicorn
+
+# Data Validation
+pydantic
+pydantic-settings
+
+# LangChain
+langchain
+langchain-community
+langchain-ollama
+langchain-core
+langchain-text-splitters
+
+# Embeddings
+sentence-transformers
+
+# Vector Store
+chromadb
+
+# PDF Loading
+pdfminer.six
+pypdf
+
+# HTML Loading
+beautifulsoup4
+
+# Utilities
+numpy
+python-dotenv
