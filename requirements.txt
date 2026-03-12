@@ -25,7 +25,14 @@ pypdf
 
 # HTML Loading
 beautifulsoup4
+lxml
 
 # Utilities
 numpy
 python-dotenv
+
+# Caching
+fastapi-cache2
+
+# Rate Limiting
+slowapi
