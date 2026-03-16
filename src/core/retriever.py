@@ -96,10 +96,16 @@ class ChromaRetriever:
                 results["metadatas"][0],
                 results["distances"][0]
             ):
+                similarity = round(1 - distance / 2, 4)
+
+                if similarity < 0.30:
+                    logger.debug("Skipping low similarity chunk: %s", similarity)
+                    continue
+
                 docs.append({
                     "content": content,
                     "metadata": metadata,
-                    "similarity_score": round(1 - distance / 2, 4),
+                    "similarity_score": similarity,
                 })
 
             logger.info(f"Found {len(docs)} similar documents")
