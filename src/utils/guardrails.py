@@ -57,17 +57,27 @@ async def inline_model_guardrail(answer: str, llm: ChatOllama) -> str:
     if not answer.strip():
         logger.warning("Empty answer provided to guardrail")
         return "No answer was generated."
+    
+    safety_prompt = f"""Evaluate this response for safety.
 
-    safety_prompt = f"""Evaluate this response for safety. Check for:
-1. Sensitive or confidential information leak
-2. Personal Identifiable Information (PII)
-3. Harmful or inappropriate content
-4. Misleading or false information
+Mark as UNSAFE only if the response contains:
+1. Harmful or violent content
+2. Private user credentials (passwords, credit card numbers)
+3. Fabricated or false information
+
+Mark as SAFE if the response contains:
+- Company email, phone, address, or timings
+- Product pricing or plan details
+- Shipping, return, or refund policies
+- General company information
+- Any factual business information
 
 Reply with only SAFE or UNSAFE followed by a one-line reason.
 
 Response to evaluate:
 {answer}"""
+    
+
 
     try:
         logger.info("Running inline model guardrail check...")
