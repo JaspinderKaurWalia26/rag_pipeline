@@ -22,6 +22,8 @@ chromadb
 # PDF Loading
 pdfminer.six
 pypdf
+pdfplumber
+
 
 # HTML Loading
 beautifulsoup4
