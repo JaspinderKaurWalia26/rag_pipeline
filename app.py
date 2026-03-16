@@ -47,9 +47,9 @@ async def lifespan(app: FastAPI):
     llm = ChatOllama(
         model=settings.llm_model,
         temperature=settings.llm_temperature,
-        num_predict=120,
-        num_ctx=1024,
-        num_thread=4,
+        num_predict=settings.llm_num_predict,
+        num_ctx=settings.llm_num_ctx,
+        num_thread=settings.llm_num_thread,
     )
     app.state.llm = llm
 
@@ -60,7 +60,7 @@ async def lifespan(app: FastAPI):
     )
 
     # RAG chain 
-    app.state.rag_chain = create_rag_chain(retriever, llm, top_k=2)
+    app.state.rag_chain = create_rag_chain(retriever, llm, top_k=settings.top_k_results)
 
     # Warmup — Ollama loads model into RAM on first call 
     # Dummy call at startup ensures users never hit this penalty
