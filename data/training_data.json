@@ -1,0 +1,342 @@
+[
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We offer a 30-day return policy for all products. Items must be in original condition with tags attached. To initiate a return, contact our support team at support@techcorp.com.\n\nQuestion: What is your return policy?",
+    "output": "We offer a 30-day return policy for all products. Items must be in original condition with tags attached. To initiate a return, contact our support team at support@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We offer a 30-day return policy for all products. Items must be in original condition with tags attached.\n\nQuestion: How many days do I have to return a product?",
+    "output": "You have 30 days to return a product. Items must be in original condition with tags attached."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We offer a 30-day return policy for all products. Items must be in original condition with tags attached. To initiate a return, contact our support team at support@techcorp.com.\n\nQuestion: How do I initiate a return?",
+    "output": "To initiate a return, contact our support team at support@techcorp.com. Items must be in original condition with tags attached within 30 days of purchase."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We offer a 30-day return policy for all products. Items must be in original condition with tags attached.\n\nQuestion: Can I return a product after 30 days?",
+    "output": "No, our return policy only allows returns within 30 days of purchase. Items must be in original condition with tags attached."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We offer a 30-day return policy for all products. Items must be in original condition with tags attached.\n\nQuestion: What condition must items be in for a return?",
+    "output": "Items must be in original condition with tags attached to be eligible for a return."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp provides a 30-day money-back guarantee. Refund requests must be made within 30 days of purchase and are processed within 5-7 business days.\n\nQuestion: What is the refund processing time?",
+    "output": "Refund requests are processed within 5-7 business days. You must request a refund within 30 days of purchase."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp provides a 30-day money-back guarantee. Refund requests must be made within 30 days of purchase and are processed within 5-7 business days.\n\nQuestion: Do you offer a money-back guarantee?",
+    "output": "Yes, TechCorp provides a 30-day money-back guarantee. Refund requests must be made within 30 days of purchase and are processed within 5-7 business days."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp provides a 30-day money-back guarantee. Refund requests must be made within 30 days of purchase and are processed within 5-7 business days.\n\nQuestion: How long does a refund take?",
+    "output": "Refunds are processed within 5-7 business days after the refund request is approved."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp provides a 30-day money-back guarantee. Refund requests must be made within 30 days of purchase.\n\nQuestion: How do I request a refund?",
+    "output": "To request a refund, submit your refund request within 30 days of purchase. Refunds are processed within 5-7 business days."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Standard shipping takes 5-7 business days within the USA. Express shipping takes 2-3 business days. International shipping may take 10-15 business days depending on the destination country.\n\nQuestion: How long does shipping take?",
+    "output": "Standard shipping takes 5-7 business days within the USA. Express shipping takes 2-3 business days. International shipping can take 10-15 business days depending on the destination country."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Standard shipping takes 5-7 business days within the USA.\n\nQuestion: How long does standard shipping take?",
+    "output": "Standard shipping takes 5-7 business days within the USA."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Express shipping takes 2-3 business days.\n\nQuestion: How long does express shipping take?",
+    "output": "Express shipping takes 2-3 business days."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: International shipping may take 10-15 business days depending on the destination country.\n\nQuestion: How long does international shipping take?",
+    "output": "International shipping may take 10-15 business days depending on the destination country."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Standard shipping takes 5-7 business days within the USA. Express shipping takes 2-3 business days.\n\nQuestion: What is the difference between standard and express shipping?",
+    "output": "Standard shipping takes 5-7 business days within the USA, while express shipping takes only 2-3 business days."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Yes, we offer 24/7 customer support via email at support@techcorp.com and phone at +1-555-832-4267. Live chat is available Monday to Friday, 9 AM to 6 PM EST.\n\nQuestion: Do you offer customer support?",
+    "output": "Yes, we offer 24/7 customer support via email at support@techcorp.com and phone at +1-555-832-4267. Live chat is available Monday to Friday, 9 AM to 6 PM EST."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Channel: Email | Contact: support@techcorp.com | Availability: All Plans 24/7.\n\nQuestion: Do you offer 24/7 customer support?",
+    "output": "Yes, 24/7 email support is available at support@techcorp.com for all plans."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Channel: Live Chat | Contact: Website / App | Availability: Mon-Fri, 9 AM - 6 PM EST.\n\nQuestion: What are the live chat hours?",
+    "output": "Live chat is available Monday to Friday, 9 AM to 6 PM EST on the website and app."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Channel: Phone | Contact: +1-555-832-4267 | Availability: Professional and above.\n\nQuestion: What is the support phone number?",
+    "output": "The support phone number is +1-555-832-4267. Phone support is available for Professional plan and above."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Channel: Priority Support | Contact: Dedicated Line | Availability: Enterprise only.\n\nQuestion: What support does the Enterprise plan get?",
+    "output": "The Enterprise plan gets priority support via a dedicated line."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Channel: Phone | Contact: +1-555-832-4267 | Availability: Professional and above.\n\nQuestion: Can Basic plan users call support?",
+    "output": "No, phone support at +1-555-832-4267 is only available for Professional plan and above."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We accept Visa, MasterCard, American Express, PayPal, and bank transfers. All transactions are secured with SSL encryption.\n\nQuestion: What payment methods do you accept?",
+    "output": "We accept Visa, MasterCard, American Express, PayPal, and bank transfers. All transactions are secured with SSL encryption."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We accept Visa, MasterCard, American Express, PayPal, and bank transfers. All transactions are secured with SSL encryption.\n\nQuestion: Is PayPal accepted?",
+    "output": "Yes, PayPal is accepted as a payment method. All transactions are secured with SSL encryption."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: We accept Visa, MasterCard, American Express, PayPal, and bank transfers. All transactions are secured with SSL encryption.\n\nQuestion: Are transactions secure?",
+    "output": "Yes, all transactions are secured with SSL encryption."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Once your order ships, you will receive a tracking email with a tracking number. You can track your order on our website under My Orders or directly on the carrier website.\n\nQuestion: How can I track my order?",
+    "output": "Once your order ships, you will receive a tracking email with a tracking number. You can track your order on our website under My Orders or directly on the carrier website."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Once your order ships, you will receive a tracking email with a tracking number.\n\nQuestion: When will I receive a tracking number?",
+    "output": "You will receive a tracking email with a tracking number once your order ships."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: New customers receive a 14-day free trial. No credit card is required. After the trial period, customers can choose a plan or cancel without any charges.\n\nQuestion: Is there a free trial available?",
+    "output": "Yes, new customers receive a 14-day free trial. No credit card is required. After the trial, you can choose a plan or cancel without any charges."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: New customers receive a 14-day free trial. No credit card is required.\n\nQuestion: Do I need a credit card for the free trial?",
+    "output": "No, no credit card is required for the 14-day free trial."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: New customers receive a 14-day free trial. No credit card is required. After the trial period, customers can choose a plan or cancel without any charges.\n\nQuestion: What happens after the free trial ends?",
+    "output": "After the 14-day free trial, you can choose a plan or cancel without any charges."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Basic | Price: $29/month | Users: Up to 5 | Storage: 50 GB | Key Features: Core features, email support, 1 product.\n\nQuestion: What is the price of the Basic plan?",
+    "output": "The Basic plan is $29/month. It supports up to 5 users with 50 GB storage and includes core features and email support."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Professional | Price: $79/month | Users: Up to 25 | Storage: 500 GB | Key Features: All products, priority support, API access.\n\nQuestion: What is the price of the Professional plan?",
+    "output": "The Professional plan is $79/month. It supports up to 25 users with 500 GB storage and includes all products, priority support, and API access."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Enterprise | Price: $199/month | Users: Unlimited | Storage: 5 TB | Key Features: Custom integrations, dedicated manager, SLA 99.9%, SSO.\n\nQuestion: What is the price of the Enterprise plan?",
+    "output": "The Enterprise plan is $199/month. It supports unlimited users with 5 TB storage and includes custom integrations, dedicated manager, SLA 99.9%, and SSO."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Student/NGO | Price: $15/month | Users: Up to 10 | Storage: 100 GB | Key Features: Basic + Pro features (verification required).\n\nQuestion: What is the price of the Student or NGO plan?",
+    "output": "The Student/NGO plan is $15/month for up to 10 users with 100 GB storage. It includes Basic and Pro features. Verification is required."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Basic | Price: $29/month | Users: Up to 5 | Storage: 50 GB.\n\nQuestion: How much storage does the Basic plan include?",
+    "output": "The Basic plan includes 50 GB of storage for up to 5 users."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Professional | Price: $79/month | Users: Up to 25 | Storage: 500 GB.\n\nQuestion: How many users does the Professional plan support?",
+    "output": "The Professional plan supports up to 25 users with 500 GB storage."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Enterprise | Price: $199/month | Users: Unlimited | Storage: 5 TB.\n\nQuestion: How many users does the Enterprise plan support?",
+    "output": "The Enterprise plan supports unlimited users with 5 TB of storage."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Enterprise | Price: $199/month | Key Features: Custom integrations, dedicated manager, SLA 99.9%, SSO.\n\nQuestion: Does the Enterprise plan include SSO?",
+    "output": "Yes, the Enterprise plan includes SSO along with custom integrations, a dedicated manager, and SLA 99.9%."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Plan: Professional | Price: $79/month | Key Features: All products, priority support, API access.\n\nQuestion: Does the Professional plan include API access?",
+    "output": "Yes, the Professional plan includes API access along with all products and priority support."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Our Basic plan starts at $29/month, Professional plan at $79/month, and Enterprise plan at $199/month. All plans include free setup and 24/7 support.\n\nQuestion: Do all plans include free setup?",
+    "output": "Yes, all plans include free setup and 24/7 support."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp uses TLS 1.3 encryption for data in transit and AES-256 encryption for stored data. SecureVault provides end-to-end encryption for sensitive data. Passwords are stored using bcrypt hashing and API keys are protected using SHA-256 hashing.\n\nQuestion: How is my data protected?",
+    "output": "Your data is protected using TLS 1.3 encryption for data in transit and AES-256 encryption for stored data. SecureVault provides end-to-end encryption. Passwords use bcrypt hashing and API keys use SHA-256 hashing."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp uses TLS 1.3 encryption for data in transit and AES-256 encryption for stored data.\n\nQuestion: What encryption does TechCorp use?",
+    "output": "TechCorp uses TLS 1.3 encryption for data in transit and AES-256 encryption for stored data."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Passwords are stored using bcrypt hashing and API keys are protected using SHA-256 hashing.\n\nQuestion: How are passwords stored?",
+    "output": "Passwords are stored using bcrypt hashing. API keys are protected using SHA-256 hashing."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Primary servers are hosted on AWS US-East in Virginia. EU customer data is stored in Frankfurt, Germany for GDPR compliance. Daily backups are retained for 30 days.\n\nQuestion: Where are your servers located?",
+    "output": "Primary servers are hosted on AWS US-East in Virginia. EU customer data is stored in Frankfurt, Germany for GDPR compliance. Daily backups are retained for 30 days."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: EU customer data is stored in Frankfurt, Germany for GDPR compliance.\n\nQuestion: Is TechCorp GDPR compliant?",
+    "output": "Yes, EU customer data is stored in Frankfurt, Germany specifically to comply with GDPR regulations."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Daily backups are maintained with a 30-day retention period.\n\nQuestion: How often are backups taken?",
+    "output": "Daily backups are maintained with a 30-day retention period."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015 in San Francisco, California. Our mission is to provide innovative software solutions to small and medium businesses. We believe technology should be accessible to everyone.\n\nQuestion: When was TechCorp founded?",
+    "output": "TechCorp Solutions Pvt. Ltd. was founded in 2015 in San Francisco, California."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions was founded in 2015 with a mission to provide innovative software solutions to small and medium businesses. We believe technology should be accessible to everyone.\n\nQuestion: What is the company mission?",
+    "output": "TechCorp Solutions mission is to provide innovative software solutions to small and medium businesses. We believe technology should be accessible to everyone."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015 in San Francisco, California.\n\nQuestion: Where is TechCorp located?",
+    "output": "TechCorp Solutions is located in San Francisco, California. Our offices are at 123 Tech Street, San Francisco, CA 94105."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: CloudSync is a cloud file management and synchronization platform designed for teams and remote work environments. SecureVault is a data encryption and security platform offering end-to-end encrypted storage for sensitive information. Analytics Pro is a business intelligence dashboard with AI-powered insights and reporting tools for data-driven decisions.\n\nQuestion: What products does TechCorp offer?",
+    "output": "TechCorp offers three main products: CloudSync for cloud file management and synchronization for teams and remote work, SecureVault for data encryption and security with end-to-end encrypted storage, and Analytics Pro for business intelligence with AI-powered insights."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: CloudSync is a cloud file management and synchronization platform designed for teams and remote work environments.\n\nQuestion: What is CloudSync?",
+    "output": "CloudSync is a cloud file management and synchronization platform designed for teams and remote work environments."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: SecureVault is a data encryption and security platform offering end-to-end encrypted storage for sensitive information.\n\nQuestion: What is SecureVault?",
+    "output": "SecureVault is a data encryption and security platform offering end-to-end encrypted storage for sensitive information."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Analytics Pro is a business intelligence dashboard with AI-powered insights and reporting tools for data-driven decisions.\n\nQuestion: What is Analytics Pro?",
+    "output": "Analytics Pro is a business intelligence dashboard with AI-powered insights and reporting tools for data-driven decisions."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: CloudSync is a cloud file management and synchronization platform designed for teams and remote work environments.\n\nQuestion: Is CloudSync good for remote work?",
+    "output": "Yes, CloudSync is specifically designed for teams and remote work environments as a cloud file management and synchronization platform."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Contact us at support@techcorp.com or call +1-555-TECHCORP. Our offices are at 123 Tech Street, San Francisco, CA 94105. Support hours are Monday to Friday, 9 AM to 6 PM EST. Email support is available 24 by 7.\n\nQuestion: How can I contact TechCorp?",
+    "output": "You can contact TechCorp by emailing support@techcorp.com or calling +1-555-TECHCORP. Our offices are at 123 Tech Street, San Francisco, CA 94105. Support hours are Monday to Friday, 9 AM to 6 PM EST. Email support is available 24/7."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Contact us at support@techcorp.com or call +1-555-TECHCORP. Our offices are at 123 Tech Street, San Francisco, CA 94105.\n\nQuestion: What is TechCorp email address?",
+    "output": "TechCorp's email address is support@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Our offices are at 123 Tech Street, San Francisco, CA 94105.\n\nQuestion: What is TechCorp office address?",
+    "output": "TechCorp's office address is 123 Tech Street, San Francisco, CA 94105."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Support hours are Monday to Friday, 9 AM to 6 PM EST.\n\nQuestion: What are TechCorp support hours?",
+    "output": "TechCorp support hours are Monday to Friday, 9 AM to 6 PM EST."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Department: Support | Email: support@techcorp.com. Department: Sales | Email: sales@techcorp.com. Department: Billing | Email: billing@techcorp.com. Department: Returns | Email: returns@techcorp.com. Department: Security | Email: security@techcorp.com. Department: Media / Press | Email: press@techcorp.com.\n\nQuestion: What is the billing department email?",
+    "output": "The billing department email is billing@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Department: Sales | Email: sales@techcorp.com.\n\nQuestion: How can I contact the sales team?",
+    "output": "You can contact the sales team at sales@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Department: Returns | Email: returns@techcorp.com.\n\nQuestion: What is the returns department email?",
+    "output": "The returns department email is returns@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Department: Security | Email: security@techcorp.com.\n\nQuestion: How do I report a security issue?",
+    "output": "To report a security issue, contact the security team at security@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Department: Media / Press | Email: press@techcorp.com.\n\nQuestion: How can media contact TechCorp?",
+    "output": "Media and press inquiries can be directed to press@techcorp.com."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: Field: Company | Details: TechCorp Solutions Pvt. Ltd. Field: Founded | Details: 2015. Field: Location | Details: San Francisco, California. Field: Email | Details: support@techcorp.com. Field: Phone | Details: +1-555-TECHCORP.\n\nQuestion: What is TechCorp phone number?",
+    "output": "TechCorp's phone number is +1-555-TECHCORP."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: Who is the CEO of TechCorp?",
+    "output": "I don't know. This information is not available in the provided documents."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: What is the weather in San Francisco today?",
+    "output": "I don't know. This information is not available in the provided documents."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: What is TechCorp stock price?",
+    "output": "I don't know. This information is not available in the provided documents."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: Does TechCorp have a mobile app?",
+    "output": "I don't know. This information is not available in the provided documents."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: How many employees does TechCorp have?",
+    "output": "I don't know. This information is not available in the provided documents."
+  },
+  {
+    "instruction": "You are TechCorp Solutions customer support assistant. Answer questions ONLY using the provided context. If the answer is not in the context, say exactly: I don't know. This information is not available in the provided documents.",
+    "input": "Context: TechCorp Solutions Pvt. Ltd. was founded in 2015.\n\nQuestion: Is TechCorp publicly traded?",
+    "output": "I don't know. This information is not available in the provided documents."
+  }
+]
