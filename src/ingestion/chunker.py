@@ -30,7 +30,9 @@ def chunk_documents(documents: List[Document]) -> List[Document]:
         splitter = RecursiveCharacterTextSplitter(
             chunk_size=settings.chunk_size,
             chunk_overlap=settings.chunk_overlap,
-            separators=["\n\n", "\n", ".", "!", "?", " ", ""]
+            separators=["\n\nQ:", "\nQ:", "\n\n", "\n", ".", "!", "?", " ", ""]
+           
+            
         )
 
         all_chunks = []
@@ -55,7 +57,7 @@ def chunk_documents(documents: List[Document]) -> List[Document]:
             for idx, chunk_text in enumerate(chunks):
 
                 # Skip very short chunks
-                if len(chunk_text.strip()) < 15:
+                if len(chunk_text.strip()) < 50:
                     continue
 
                 all_chunks.append(Document(
