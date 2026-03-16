@@ -24,7 +24,13 @@ class Settings(BaseSettings):
     embedding_model: str
     llm_model: str
     llm_temperature: float
-
+    llm_num_predict: int
+    llm_num_ctx: int
+    llm_num_thread: int
+    
+    # PDF Processing
+    min_page_length: int
+    
     # Paths
     vector_store_path: str
     collection_name: str
