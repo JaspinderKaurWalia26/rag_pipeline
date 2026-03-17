@@ -5,6 +5,7 @@ from fastapi import APIRouter, HTTPException, Request
 from slowapi import Limiter
 from slowapi.util import get_remote_address
 from redis.asyncio import Redis
+from config import settings
 
 from src.api.schemas import Query
 from src.utils.guardrails import validate_input, inline_model_guardrail
@@ -14,8 +15,6 @@ logger = setup_logger(__name__)
 
 router = APIRouter()
 
-# Cache TTL in seconds — cached answers expire after 5 minutes
-CACHE_TTL = 300
 
 # Rate limiter — key by client IP address
 limiter = Limiter(key_func=get_remote_address)
@@ -38,7 +37,7 @@ def health_check():
 
 
 @router.post("/ask")
-@limiter.limit("10/minute")
+@limiter.limit(settings.rate_limit)
 async def ask(request: Request, query: Query):
     """
     Main endpoint for question answering via RAG pipeline.
@@ -97,7 +96,7 @@ async def ask(request: Request, query: Query):
 
         # Step 5: Cache the safe answer — not the raw answer
         # Ensures cache hits always return guardrail-verified responses
-        await redis.set(cache_key, json.dumps(safe_answer), ex=CACHE_TTL)
+        await redis.set(cache_key, json.dumps(safe_answer), ex=settings.cache_ttl)
 
         total_elapsed = round(time.perf_counter() - total_start, 2)
         logger.info(

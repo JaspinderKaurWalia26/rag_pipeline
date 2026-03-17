@@ -34,7 +34,13 @@ class Settings(BaseSettings):
     # Paths
     vector_store_path: str
     collection_name: str
+    
+    # Rate Limiting
+    rate_limit: str          
 
+    # Cache
+    cache_ttl: int 
+    
     class Config:
         env_file = ".env"
         env_file_encoding = "utf-8"
