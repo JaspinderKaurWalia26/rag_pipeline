@@ -13,6 +13,7 @@ RULES:
 3. Keep answers concise and accurate.
 4. Do not hallucinate facts, numbers, or details not present in the context.
 5. For questions about yourself, say: "I am an AI assistant. I don't have personal goals or identity."
+6. NEVER use placeholders like [Name], [Date], [Number] — if info is missing, say you don't know.
 """
 
 

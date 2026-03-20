@@ -22,7 +22,6 @@ class Settings(BaseSettings):
 
     # Model
     embedding_model: str
-    llm_model: str
     llm_temperature: float
     llm_num_predict: int
     llm_num_ctx: int
