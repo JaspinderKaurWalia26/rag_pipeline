@@ -1,3 +1,4 @@
+import asyncio
 import json
 import time
 from hashlib import sha256
@@ -39,10 +40,17 @@ async def ask(request: Request, query: Query):
         validated = validate_input(query.question)
         original_question = validated["query"]
 
-        # Step 2: LLM query rewrite 
+        redis: Redis = request.app.state.redis
         rewrite_llm = request.app.state.rewrite_llm
+
+        # Step 2 & 3: Rewrite query + original query cache lookup — parallel
         rewrite_start = time.perf_counter()
-        clean_question, was_corrected = await rewrite_query(original_question, rewrite_llm)
+        rewrite_task = asyncio.create_task(rewrite_query(original_question, rewrite_llm))
+        cache_task = asyncio.create_task(redis.get(build_cache_key(original_question)))
+
+        (clean_question, was_corrected), cached_original = await asyncio.gather(
+            rewrite_task, cache_task
+        )
         rewrite_elapsed = round(time.perf_counter() - rewrite_start, 2)
 
         correction_note = (
@@ -56,12 +64,28 @@ async def ask(request: Request, query: Query):
                 f"in {rewrite_elapsed}s"
             )
 
-        # Step 3: Check Redis cache
-        cache_key = build_cache_key(clean_question)
-        redis: Redis = request.app.state.redis
+        # Step 3a: Original query cache HIT (before rewrite was applied)
+        if cached_original and not was_corrected:
+            logger.info("Cache HIT (original query) — returned early")
+            return {
+                "answer": json.loads(cached_original),
+                "cached": True,
+                "correction_note": None,
+                "timing_seconds": {
+                    "rewrite":      rewrite_elapsed,
+                    "cache_lookup": rewrite_elapsed,  
+                }
+            }
 
+        # Step 3b: Corrected query cache check 
         cache_start = time.perf_counter()
-        cached = await redis.get(cache_key)
+        cache_key = build_cache_key(clean_question)
+
+        if was_corrected:
+            cached = await redis.get(cache_key)
+        else:
+            cached = cached_original  # already fetched in parallel
+
         cache_elapsed = round(time.perf_counter() - cache_start, 3)
 
         if cached:
@@ -76,7 +100,7 @@ async def ask(request: Request, query: Query):
                 }
             }
 
-        # Step 4: RAG pipeline 
+        # Step 4: RAG pipeline
         logger.info("Cache MISS — running RAG pipeline")
         rag_chain = request.app.state.rag_chain
         rag_start = time.perf_counter()
@@ -84,7 +108,7 @@ async def ask(request: Request, query: Query):
         rag_elapsed = round(time.perf_counter() - rag_start, 2)
         logger.info(f"RAG pipeline completed in {rag_elapsed}s")
 
-        # Step 5: Guardrail 
+        # Step 5: Guardrail
         logger.info("Running inline model guardrail...")
         guardrail_llm = request.app.state.guardrail_llm
         guardrail_start = time.perf_counter()

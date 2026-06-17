@@ -3,6 +3,21 @@
 A production-ready Retrieval Augmented Generation (RAG) pipeline that answers questions from company documents using ChromaDB, Ollama, and FastAPI. The system loads documents, chunks and embeds them, stores them in a vector database, and retrieves relevant context at query time to generate accurate answers using a local LLM.
 
 ---
+
+## Screenshots
+
+### Chat Interface
+![Chat Interface](docs/screenshots/chat_interface.png)
+
+*RAG-powered chatbot answering questions from the company knowledge base.*
+
+### Cached Response
+![Cached Response](docs/screenshots/chat_cached_response.png)
+
+*Repeated queries are served instantly from Redis cache (⚡ CACHED badge visible).*
+
+---
+
 ## Project Structure
 
 ```
@@ -17,6 +32,11 @@ RAG_PROJECT/
 │   │   └── TechCorp_KnowledgeBase.pdf  # Company PDF document
 │   ├── vector_store/                   # ChromaDB persistent storage (auto-generated)
 │   └── training_data.json              # Fine-tuning dataset in Alpaca format
+│
+├── docs/
+│   └── screenshots/
+│       ├── chat_interface.png          # Chat UI screenshot
+│       └── chat_cached_response.png    # Redis cached response screenshot
 │
 ├── logs/
 │   └── app.log                         # Application logs
@@ -92,6 +112,7 @@ When a user sends a question to the `/ask` endpoint, the following steps happen:
 - **Guardrail Validation** — The `guardrails.py` module checks the LLM response before it is returned to the user. This prevents hallucinated or unsafe responses from reaching the user.
 
 - **Caching** — Responses are cached in Redis. If the same question is asked again, the cached answer is returned immediately without calling the LLM again, significantly reducing response time.
+
 ---
 
 ## Fine-Tuning
@@ -124,6 +145,7 @@ Since external fine-tuning tools were not used at this stage, Ollama's **Modelfi
 - Ollama installed and running
 - Redis installed and running
 - llama3.2 model pulled in Ollama
+
 ```bash
 ollama pull llama3.2
 ```
@@ -169,7 +191,7 @@ ollama create techcorp-assistant -f Modelfile
 python -m src.ingestion.data_ingestion
 ```
 
-### Step 7 — Start the server
+### Step 7 — Start the FastAPI server
 
 ```bash
 python -m uvicorn app:app --reload
@@ -177,5 +199,15 @@ python -m uvicorn app:app --reload
 
 The API will be available at `http://127.0.0.1:8000`  
 Swagger UI (Interactive API docs): `http://127.0.0.1:8000/docs`
+
+### Step 8 — Run the Streamlit UI
+
+Open a new terminal (keep the FastAPI server running) and run:
+
+```bash
+streamlit run main.py
+```
+
+The chat interface will be available at `http://localhost:8501`
 
 ---

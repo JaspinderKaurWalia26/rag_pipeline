@@ -1,4 +1,5 @@
 import chromadb
+from functools import lru_cache
 from typing import List, Dict, Optional
 from src.ingestion.embedding import EmbeddingManager
 from src.utils.logger import setup_logger
@@ -21,6 +22,23 @@ def _get_embedder() -> EmbeddingManager:
         logger.info("Initializing EmbeddingManager")
         _embedding_manager = EmbeddingManager(settings.embedding_model)
     return _embedding_manager
+
+
+@lru_cache(maxsize=256)
+def _get_cached_embedding(query: str) -> tuple:
+    """
+    Generate and cache embedding for a query string.
+    lru_cache prevents regenerating embeddings for repeated queries.
+    Returns a tuple because lists are not hashable.
+    Args:
+        query: Normalized query string (strip + lower already applied)
+    Returns:
+        Embedding as tuple (hashable for lru_cache)
+    """
+    embedder = _get_embedder()
+    embedding = embedder.generate_embeddings([query])[0].tolist()
+    logger.info(f"Embedding generated and cached for query: '{query[:40]}'")
+    return tuple(embedding)
 
 
 class ChromaRetriever:
@@ -77,9 +95,9 @@ class ChromaRetriever:
             raise ValueError("Query cannot be empty")
 
         try:
-            # Generate embedding for query
-            embedder = _get_embedder()
-            query_embedding = embedder.generate_embeddings([query])[0].tolist()
+            # Fetch from embedding cache — skips regeneration for repeated queries
+            normalized_query = query.strip().lower()
+            query_embedding = list(_get_cached_embedding(normalized_query))
 
             # Perform vector search
             logger.info(f"Searching top {top_k} similar documents...")
